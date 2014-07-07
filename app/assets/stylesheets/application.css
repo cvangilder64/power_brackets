@@ -14,8 +14,9 @@
  *= require_self
  */
 body{
-  
+  height:100%;
 }
+
 .container2{
     background: url(golf.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -50,21 +51,21 @@ body{
 }
 .container1{
     margin-top:30px;
-    background: url(woodnavy.jpg) no-repeat center center fixed; 
+    background: url(woodnavy.jpg)  center center ; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-    height:700px;
+    height:100vh;
 }
 
 .container3{
-    background: url(woodnavy.jpg) no-repeat center center fixed; 
+    background: url(woodnavy.jpg) center center ; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-    height:700px;
+    height:100vh;
 }
 .navbar-brand{
 margin-top:-10px;
@@ -111,7 +112,7 @@ background-color:rgba(237,28,36,.6);
 }
 
 .jumbotron > div > h1{
- color:white;   
+ color:white;  
 }
 .bracket img{
     width:95%;
@@ -185,6 +186,11 @@ background-color:rgba(237,28,36,.6);
 margin-top:50px;
  color:white;
 text-align: center;
+}
+
+.signuph4{
+    
+    margin-bottom:-10px;
 }
 
 li{

@@ -15,4 +15,18 @@
 //= require turbolinks
 //= require_tree .
 
-
+$(document).ready(function(){
+    console.log('ready');
+    
+//    scroll to anchor function
+var $root = $('html, body');
+$('a').click(function() {
+    var href = $.attr(this, 'href');
+    $root.animate({
+        scrollTop: $(href).offset().top - 120
+    }, 500, function () {
+        window.location.hash = href;
+    });
+    return false;
+});
+});
