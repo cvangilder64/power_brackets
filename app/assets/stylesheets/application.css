@@ -139,14 +139,14 @@ background-color:rgba(237,28,36,.6);
 /* Chrome, Safari, Opera */
 @-webkit-keyframes pulse {
     0%   {opacity: .25;}
-    50% {opacity: 1; margin-top: 30px}
+    50% {opacity: .8; margin-top: 30px}
     100% {opacity: .25;}
 }
 
 /* Standard syntax */
 @keyframes pulse {
     0%   {opacity: .25;}
-    50% {opacity: 1; margin-top: 30px}
+    50% {opacity: .8; margin-top: 30px}
     100% {opacity: .25;}
   
 }

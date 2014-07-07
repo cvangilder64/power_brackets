@@ -2769,7 +2769,7 @@ fieldset[disabled] .btn {
   opacity: .65;
 }
 .btn-default {
-    margin-top:5px;
+    margin-top:7px;
     margin-left:5px;
   color: white;
   background-color:rgba(237,28,36,.6);
@@ -5355,7 +5355,7 @@ a.list-group-item-danger.active:focus {
   font-weight: bold;
   line-height: 1;
   color: #000;
-  text-shadow: 0 1px 0 #fff;
+  text-shadow: 0 0px 0 #fff;
   filter: alpha(opacity=20);
   opacity: .2;
 }
