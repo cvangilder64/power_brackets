@@ -17,6 +17,10 @@ body{
   height:100%;
 }
 
+h1{
+    margin-bottom:40px;
+}
+
 .container2{
     background: url(golf.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -50,7 +54,7 @@ body{
     height:150px;
 }
 .container1{
-    margin-top:30px;
+    margin-top:0px;
     background: url(woodnavy.jpg)  center center ; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -72,7 +76,7 @@ margin-top:-10px;
 }
 
 .navbar{
-background-color:rgba(0,0,0,.95);   
+background-color:rgba(0,0,0,1);   
 }
 
 .navbar-toggle{
@@ -104,6 +108,8 @@ color: lightgrey;
 background-color:rgba(237,28,36,.6); 
 }
 
+
+
 .jumbotron{
     opacity:1;
     background:none;
@@ -133,18 +139,14 @@ background-color:rgba(237,28,36,.6);
 /* Chrome, Safari, Opera */
 @-webkit-keyframes pulse {
     0%   {opacity: .25;}
-    25%  {opacity: .50;}
-    50% {opacity: 1;}
-    75% {opacity: .50;}
+    50% {opacity: 1; margin-top: 30px}
     100% {opacity: .25;}
 }
 
 /* Standard syntax */
 @keyframes pulse {
     0%   {opacity: .25;}
-    25%  {opacity: .50;}
-    50% {opacity: 1;}
-    75% {opacity: .50;}
+    50% {opacity: 1; margin-top: 30px}
     100% {opacity: .25;}
   
 }
@@ -193,9 +195,10 @@ text-align: center;
     margin-bottom:-10px;
 }
 
-li{
+.container3 li{
     list-style-image: url('powerlist.png');
     color:white;
+    margin-bottom:40px;
 }
 
 .notifications h3{
@@ -203,12 +206,13 @@ li{
 }
 
 h3{
-    margin-top:-7px;
+    margin-top:-30px;
  color:lightgrey;
     text-align: center;
 }
 
 h4{
+    margin-top:-22px;
  color:lightgrey;
     text-align: center;
 }

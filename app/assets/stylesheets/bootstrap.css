@@ -43,7 +43,8 @@ template {
   display: none;
 }
 a {
-  background: transparent;
+
+    color:white;
 }
 a:active,
 a:hover {
@@ -910,18 +911,17 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #428bca;
+  color: white;
   text-decoration: none;
+
 }
 a:hover,
 a:focus {
-  color: #2a6496;
-  text-decoration: underline;
+  color: white;
+  text-decoration:none ;
 }
 a:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+ 
 }
 figure {
   margin: 0;
@@ -2725,7 +2725,7 @@ select[multiple].input-lg {
   padding: 6px 12px;
   margin-bottom: 0;
   font-size: 14px;
-  font-weight: normal;
+
   line-height: 1.42857143;
   text-align: center;
   white-space: nowrap;
@@ -2769,18 +2769,20 @@ fieldset[disabled] .btn {
   opacity: .65;
 }
 .btn-default {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc;
+    margin-top:5px;
+    margin-left:5px;
+  color: white;
+  background-color:rgba(237,28,36,.6);
+ 
 }
 .btn-default:hover,
 .btn-default:focus,
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  color: white;
+  background-color: rgba(237,28,36,.6);
+
 }
 .btn-default:active,
 .btn-default.active,
@@ -2847,7 +2849,7 @@ fieldset[disabled] .btn-primary.active {
   border-color: #357ebd;
 }
 .btn-primary .badge {
-  color: #428bca;
+  color: white;
   background-color: #fff;
 }
 .btn-success {
