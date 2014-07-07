@@ -15,11 +15,13 @@
  */
 body{
   height:100%;
+    color:white;
 }
 
 h1{
     margin-bottom:40px;
 }
+
 
 .container2{
     background: url(golf.jpg) no-repeat center center fixed; 
@@ -47,6 +49,14 @@ h1{
 }
 .container6{
     background: url(soccer.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    height:150px;
+}
+.container7{
+    background: url(mlg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -205,10 +215,20 @@ text-align: center;
  color:white;   
 }
 
+.teamh1{
+    margin-bottom:-20px;
+    color:white;
+    text-align: center;
+}
+
 h3{
     margin-top:-30px;
  color:lightgrey;
     text-align: center;
+}
+
+.col-md-12{
+    margin-top:50px;
 }
 
 h4{
@@ -226,4 +246,15 @@ h4{
     border-radius:8px;
     border-color:rgba(237,28,36,.5);
     
+}
+
+.contacth1{
+    color:white;
+    text-align:left;
+    
+}
+
+.contacth4{
+    color:white;
+    text-align: left;
 }
