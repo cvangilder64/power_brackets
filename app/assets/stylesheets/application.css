@@ -167,6 +167,11 @@ background-color:rgba(237,28,36,.6);
         margin-bottom: 20px;
     }
 
+table{
+    color:black;
+    background-color:rgba(255,255,255,.5);
+}
+
 @media (max-height:700px){
 
    .main-logo{
