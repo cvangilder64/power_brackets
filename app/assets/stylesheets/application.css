@@ -23,6 +23,7 @@ h1{
 }
 
 
+/*Golf Background Image*/
 .container2{
     background: url(golf.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -31,6 +32,7 @@ h1{
   background-size: cover;
     height:150px;
 }
+/*Football Background Image*/
 .container4{
     background: url(football.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -39,6 +41,8 @@ h1{
   background-size: cover;
     height:150px;
 }
+
+/*Baseball Background Image*/
 .container5{
     background: url(baseball.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -47,6 +51,8 @@ h1{
   background-size: cover;
     height:150px;
 }
+
+/*Soccer Background Image*/
 .container6{
     background: url(soccer.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -55,6 +61,8 @@ h1{
   background-size: cover;
     height:150px;
 }
+
+/*MLG Background Image*/
 .container7{
     background: url(mlg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -63,6 +71,8 @@ h1{
   background-size: cover;
     height:150px;
 }
+
+/*First Wood Background*/
 .container1{
     margin-top:0px;
     background: url(woodnavy.jpg)  center center ; 
@@ -73,6 +83,7 @@ h1{
     height:100vh;
 }
 
+/*Other Wood Backgrounds*/
 .container3{
     background: url(woodnavy.jpg) center center ; 
   -webkit-background-size: cover;
