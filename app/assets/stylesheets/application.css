@@ -96,6 +96,7 @@ h1{
   -o-background-size: cover;
   background-size: cover;
     height:100vh;
+
 }
 
 /*Other Wood Backgrounds*/
@@ -164,6 +165,18 @@ background-color:rgba(237,28,36,.6);
     margin-top:-50px;
 }
 
+ .input-group:first-child{
+       margin-top:20px;
+   }
+    .input-group{
+        margin-bottom: 20px;
+    }
+
+table{
+    color:black;
+    background-color:rgba(255,255,255,.5);
+}
+
 @media (max-height:700px){
 
    .main-logo{
@@ -174,6 +187,14 @@ background-color:rgba(237,28,36,.6);
         font-size:40px;
         margin-bottom:-10px;
     }
+   .input-group:first-child{
+       margin-top:20px;
+   }
+    .input-group{
+        margin-bottom: 10px;
+    }
+
+
 }
 
 
@@ -225,19 +246,20 @@ background-color:rgba(237,28,36,.6);
 .iframe{
  text-align: center;
     margin-top:150px;
+
 }
-.iframe iframe{
+.iframe img{
     margin:0px auto;
     width:85%;
     height:300px;
 }
 
 .profile{
- margin-top:75px;   
+ margin-top:45px;
 }
 
 .profileh1{
-    margin-top:-20px;
+    margin-top:0px;
     color:white;
     text-align: center;
 }
