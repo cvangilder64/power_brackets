@@ -72,6 +72,16 @@ h1{
     height:150px;
 }
 
+/*Basketball Background Image*/
+.container8{
+    background: url(basketball.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    height:150px;
+}
+
 /*First Wood Background*/
 .container1{
     margin-top:0px;
