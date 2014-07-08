@@ -23,7 +23,7 @@ var $root = $('html, body');
 $('a').click(function() {
     var href = $.attr(this, 'href');
     $root.animate({
-        scrollTop: $(href).offset().top - 120
+        scrollTop: $(href).offset().top - 0
     }, 500, function () {
         window.location.hash = href;
     });
