@@ -182,6 +182,7 @@ table{
     color:black;
 }
 td{
+    text-align: center;
     background-color:white;
 }
 .pricing{
