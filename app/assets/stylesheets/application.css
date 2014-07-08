@@ -22,7 +22,12 @@ h1{
     margin-bottom:40px;
 }
 
-
+.texture{
+    background: url(dots2.png) repeat;
+    height: 150px;
+    opacity: .4;
+    margin-bottom: -150px;
+}
 /*Golf Background Image*/
 .container2{
     background: url(golf.jpg) no-repeat center center fixed; 
