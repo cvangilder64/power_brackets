@@ -17,6 +17,12 @@ body{
   height:100%;
     color:white;
 }
+.left{
+    text-align: left;
+}
+.middle{
+    width:50%;
+}
 
 h1{
     margin-bottom:40px;
