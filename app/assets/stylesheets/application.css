@@ -25,7 +25,7 @@ h1{
 .texture{
     background: url(dots2.png) repeat;
     height: 150px;
-    opacity: .4;
+    opacity: .2;
     margin-bottom: -150px;
 }
 /*Golf Background Image*/
