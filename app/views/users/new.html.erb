@@ -4,9 +4,6 @@
             <%= user.email_field :email %>
             <%= user.password_field :password %>
             <%= user.form_group do %>
-                <%= user.check_box :remember_me %>
-            <% end %>
-            <%= user.form_group do %>
                 <%= user.submit %>
             <% end %>
         <% end %>
