@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 	respond_to :html, :json
 
 	def show
-		@user = current_user
+
 		respond_with @user
 	end
 
@@ -47,6 +47,6 @@ class UsersController < ApplicationController
 	end
 
 	def ensure_current_user
-		redirect_to new_session_url unless logged_in?
+
 	end
 end
