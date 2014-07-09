@@ -8,7 +8,6 @@
                     <br>
                 <% end %>
             <% end %>
-
             <%= bootstrap_form_for(@user, layout: :horizontal) do |user| %>
                 <%= user.text_field :name, placeholder: "Full Name", prepend: link_to("", "#", class: "glyphicon glyphicon-user") %>
                 <%= user.email_field :email, placeholder: "Email", prepend: link_to("", "#", class: "glyphicon glyphicon-envelope") %>
@@ -18,7 +17,6 @@
             <% end %>
         </div>
         <form class="col-md-6">
-
              <!-- Email Address Input -->
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
