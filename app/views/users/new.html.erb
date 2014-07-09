@@ -1,12 +1,5 @@
 <div class="container-fluid container1" id="logo">
     <div class="jumbotron">
-<<<<<<< HEAD
-
-
-
-            <h2>Create a New Profile</h2>
-
-=======
         <div class="col-md-6">
             <h2>Create a New Profile</h2>
             <%  if @user.errors.any? %>
@@ -15,7 +8,7 @@
                     <br>
                 <% end %>
             <% end %>
->>>>>>> origin/master
+
             <%= bootstrap_form_for(@user, layout: :horizontal) do |user| %>
                 <%= user.text_field :name, placeholder: "Full Name", prepend: link_to("", "#", class: "glyphicon glyphicon-user") %>
                 <%= user.email_field :email, placeholder: "Email", prepend: link_to("", "#", class: "glyphicon glyphicon-envelope") %>
@@ -26,12 +19,6 @@
         </div>
         <form class="col-md-6">
 
-<<<<<<< HEAD
-        <% end %>
-
-        <form class="col-md-6">
-=======
->>>>>>> origin/master
              <!-- Email Address Input -->
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
