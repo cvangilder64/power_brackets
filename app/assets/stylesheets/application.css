@@ -12,13 +12,23 @@
  *
  *= require_tree .
  *= require_self
+ *= require rails_bootstrap_forms
  */
 body{
   height:100%;
     color:white;
+    background-color:#060321;
 }
 .left{
     text-align: left;
+}
+
+h5{
+    text-align: center;
+}
+
+h5:last-child{
+    margin-top:70px;
 }
 .middle{
     width:50%;
@@ -189,7 +199,7 @@ background-color:rgba(237,28,36,.6);
 }
 
 footer{
-    color:black;
+    color:white;
 
 
 }
@@ -198,6 +208,10 @@ footer img{
     width:50%;
     height:50%;
     margin:15px;
+}
+
+footer{
+    text-align: left;
 }
 
 .jumbotron{
