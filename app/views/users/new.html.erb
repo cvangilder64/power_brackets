@@ -1,6 +1,17 @@
 <div class="container-fluid container1" id="logo">
     <div class="jumbotron">
-        <div class="col-md-6">
+        <%= bootstrap_form_for(@user, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-10") do |user| %>
+            <%= user.email_field :email %>
+            <%= user.password_field :password %>
+            <%= user.form_group do %>
+                <%= user.check_box :remember_me %>
+            <% end %>
+            <%= user.form_group do %>
+                <%= user.submit %>
+            <% end %>
+        <% end %>
+
+        <form class="col-md-6">
             <h2>Create a New Profile</h2>
              <!-- Email Address Input -->
             <div class="input-group">
@@ -18,9 +29,13 @@
                 <input class="form-control" type="password" placeholder="Password">
                 <input class="form-control" type="password" placeholder="Confirm Password">
             </div>
-        <!-- Sign Up Button -->
-          <button type="submit" class="sign-in-button">Sign Up Now</button>
-        </div>
+            <div id="signupalert" style="display:none" class="alert alert-danger">
+                <p>Error:</p>
+                <span></span>
+            </div>
+            <!-- Sign Up Button -->
+            <button type="submit" class="sign-in-button">Sign Up Now</button>
+        </form>
 
         <div class="col-md-6 hidden-sm hidden-xs">
             <h2>Already a Member?</h2>
@@ -28,7 +43,5 @@
             <br>
             <h3>Click the Power On Button<br> to jump into the competition!</h3>
         </div>
-
-
 </div>
 
