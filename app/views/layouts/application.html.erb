@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PowerBrackets</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+    <title>PowerBrackets</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
 
@@ -39,12 +39,10 @@
                         <a href="#pricing">Pricing</a>
                     </li>
                 </ul>
-
                 <ul class="nav navbar-nav navbar-right">
-
                     <li> <a href="/users/new">Sign Up</a></li>
                     <li class="dropdown">
-                        <button class="btn btn-default dropdown-toggle poweron" data-toggle="dropdown">Power On</button>
+                        <button class="btn btn-danger dropdown-toggle poweron" data-toggle="dropdown">Power On</button>
                         <div id="loginbox" class="dropdown-menu panel panel-default">
                             <div class="panel-heading">
                                 <div class="panel-title">Sign In</div>
@@ -90,27 +88,28 @@
                             </div>
                             <div class="panel-body" >
                                 <form id="signupform" class="form-signup" role="form">
-                                    <div id="signupalert" style="display:none" class="alert alert-danger">
-                                        <p>Error:</p>
-                                        <span></span>
-                                    </div>
-                                        <div class="input-group">
+
+                                    <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                        <input type="text" class="form-control" name="email" value="" placeholder="Email">
+                                        <input type="email" class="form-control" name="email" value="" placeholder="Email">
                                     </div>
-                                        <div class="input-group">
+                                    <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                         <input type="text" style="border-bottom:none;" class="form-control" name="first_name" value="" placeholder="First Name">
                                         <input type="text" class="form-control" name="last_name" value="" placeholder="Last Name">
                                     </div>
-                                        <div class="input-group">
+                                    <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                        <input type="text" class="form-control" name="password" value="" placeholder="Password">
-                                        <input type="text" class="form-control" name="confirm_password" value="" placeholder="Confirm Password">
+                                        <input type="password" class="form-control" name="password" value="" placeholder="Password">
+                                        <input type="password" class="form-control" name="confirm_password" value="" placeholder="Confirm Password">
                                     </div>
-                                        <div class="form-group">
+                                    <div class="form-group">
                                         <button id="btn-signup" type="button" class="btn btn-danger"><i class="icon-hand-right"></i>Sign Up</button>
                                         <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>Sign Up with Facebook</button>
+                                    </div>
+                                    <div id="signupalert" style="display:none" class="alert alert-danger">
+                                        <p>Error:</p>
+                                        <span></span>
                                     </div>
                                 </form>
                             </div>
