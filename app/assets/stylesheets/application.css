@@ -215,12 +215,10 @@ footer{
 }
 
 .jumbotron{
-
     background:none;
-
     text-align: center;
     margin-top:100px;
-
+    opacity: .7;
 }
 
 .jumbotron > div > h1{
