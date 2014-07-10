@@ -2,14 +2,11 @@
     <div class="jumbotron">
         <form class="col-md-6" action="/users" accept-charset="UTF08" id="new_user" method="post">
             <h2>Create a New Profile</h2>
-        <form class="col-md-6">
+            <form class="col-md-6">
+
+            <%= form_for @user do |u| %>
 
 
-            <div style="display:none">
-
-            <input name="utf8" type="hidden" value="✓">
-            <input name="authenticity_token" type="hidden" value="M5GIxSVMLa9B1kedg6wQbmrdi6ic+tX7y4iODkeuRn8=">
-            </div>
              <!-- Email Address Input -->
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
@@ -41,6 +38,8 @@
                 <% end %>
             <% end %>
                 </div>
+
+            <% end %>
         </form>
 
         <div class="col-md-6 hidden-xs">
