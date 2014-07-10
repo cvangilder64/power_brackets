@@ -1,46 +1,44 @@
 <div class="container-fluid container1" id="logo">
     <div class="jumbotron">
-        <div class="col-md-6">
+        <form class="col-md-6" action="/users" accept-charset="UTF08" id="new_user" method="post">
             <h2>Create a New Profile</h2>
-            <%  if @user.errors.any? %>
-                <% @user.errors.full_messages.each do |message| %>
-                    <%= message %>
-                    <br>
-                <% end %>
-            <% end %>
 
-            <%= bootstrap_form_for(@user, layout: :horizontal) do |user| %>
-                <%= user.text_field :name, placeholder: "Full Name", prepend: link_to("", "#", class: "glyphicon glyphicon-user") %>
-                <%= user.email_field :email, placeholder: "Email", prepend: link_to("", "#", class: "glyphicon glyphicon-envelope") %>
-                <%= user.password_field :password, placeholder: "Password", prepend: link_to("", "#", class: "glyphicon glyphicon-lock") %>
-                <%= user.password_field :password_confirmation, label: "Confirm Password", placeholder: "Confirm Password", prepend: link_to("", "#", class: "glyphicon glyphicon-lock")%>
-                <%= user.submit "Sign Up Now", class: "btn btn-default" %>
-            <% end %>
-        </div>
-        <form class="col-md-6">
+            <div style="display:none">
 
+            <input name="utf8" type="hidden" value="✓">
+            <input name="authenticity_token" type="hidden" value="M5GIxSVMLa9B1kedg6wQbmrdi6ic+tX7y4iODkeuRn8=">
+            </div>
              <!-- Email Address Input -->
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                <input class="form-control" type="email" placeholder="Email address">
+                <input class="form-control" type="email" placeholder="Email address" name="user[email]" id="user_email">
             </div>
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input class="form-control" type="text" placeholder="First Name">
-                <input class="form-control" type="text" placeholder="Last Name">
+                <input class="form-control" type="text" placeholder="Full Name" id="user_name" name="user[name]">
+
             </div>
             <!-- Password Input -->
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                <input class="form-control" type="password" placeholder="Password">
-                <input class="form-control" type="password" placeholder="Confirm Password">
+                <input class="form-control" type="password" placeholder="Password" id="user_password" name="user[password]">
+                <input class="form-control" type="password" placeholder="Confirm Password" id="user_password_confirmation" name="user[password_confirmation]">
             </div>
             <div id="signupalert" style="display:none" class="alert alert-danger">
                 <p>Error:</p>
                 <span></span>
             </div>
             <!-- Sign Up Button -->
-            <button type="submit" class="sign-in-button">Sign Up Now</button>
+            <button type="submit" class="sign-in-button" name="commit" value="Sign Up Now">Sign Up Now</button>
+            <div>
+                <br>
+            <%  if @user.errors.any? %>
+                <% @user.errors.full_messages.each do |message| %>
+                    <span class="glyphicon glyphicon-remove"> <%= message %></span>
+                    <br>
+                <% end %>
+            <% end %>
+                </div>
         </form>
 
         <div class="col-md-6 hidden-xs">
