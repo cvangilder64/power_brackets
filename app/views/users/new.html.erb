@@ -6,7 +6,6 @@
 
             <%= form_for @user do |u| %>
 
-
              <!-- Email Address Input -->
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
@@ -14,7 +13,8 @@
             </div>
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input class="form-control" type="text" placeholder="Full Name" id="user_name" name="user[name]">
+                <input class="form-control" type="text" placeholder="First Name" id="user_name" name="user[name]">
+                <input class="form-control" type="text" placeholder="Last Name" id="user_last_name" name="user[last_name]">
 
             </div>
             <!-- Password Input -->

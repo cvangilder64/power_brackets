@@ -39,6 +39,7 @@ class UsersController < ApplicationController
 	def safe_params
 		safe_attributes = [
 			:name,
+            :last_name,
 			:email,
 			:password,
 			:password_confirmation
