@@ -41,7 +41,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                    <% if current_user %>
-                       <li><%= link_to current_user.name, current_user %></li>
+                       <li><%= link_to current_user.name + ' ' + current_user.last_name, current_user %></li>
                    <% else %>
                        <li> <a href="/users/new">Sign Up</a></li>
                    <% end %>
@@ -135,13 +135,13 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid container1" id="logo">
+
 
     <%= yield %>
 
         <span class="flash col-md-8 col-md-offset-2"><%= flash[:notice] %></span>
 
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-</div>
+
 </body>
 </html>

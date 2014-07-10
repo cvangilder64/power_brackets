@@ -74,12 +74,14 @@
     <h3 >Jump into the competition</h3>
   <br>
     <br>
+
+    <%= form_tag session_path, method: 'post' do %>
     <!-- Email Address Input -->
     <div class="input-group">
   <span class="input-group-addon">
     <span class="glyphicon glyphicon-envelope"></span>
   </span>
-  <input class="form-control" type="text" placeholder="Email address">
+  <input class="form-control" type="text" name="email" id="email" placeholder="Email address">
 </div>
 
     <br>
@@ -90,14 +92,15 @@
   <span class="input-group-addon">
     <span class="glyphicon glyphicon-lock"></span>
   </span>
-  <input class="form-control" type="password" placeholder="Password">
+  <input class="form-control" type="password" name="password" id="password" placeholder="Password">
 </div>
     <br>
 
 
     <!-- Sign In Button -->
-      <button type="submit" class="sign-in-button">Sign In Now</button>
+      <button type="submit" name="commit" class="sign-in-button">Sign In Now</button>
     </div>
+    <% end %>
 
 <div class="col-md-6"><br><h1 class="signuph1">Sign Up</h1>
     <h4 class="signuph4">Connect with your friends and learn about<br> competitions in your area!</h4>
@@ -291,6 +294,7 @@
 
 <!--    end of content div-->
 </div>
+     </div>
 <footer class="col-md-12 hidden-sm hidden-xs">
 <div class="col-md-3">
     <h5>Services</h5>
@@ -316,6 +320,7 @@
         <li>Phone: 123-456-7890</li>
     </ul>
 </div>
+
 <div class="col-md-4">
     <h5>&copy; Copyright Power Brackets 2014</h5>
 </div>
