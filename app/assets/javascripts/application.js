@@ -15,8 +15,8 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function(){
-    console.log('ready');
+
+
     
 //    scroll to anchor function
 var $root = $('html, body');
@@ -32,4 +32,3 @@ $('a').click(function() {
 
 
 
-});
