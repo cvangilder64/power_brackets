@@ -3,12 +3,8 @@ Rails.application.routes.draw do
     root 'home#index'
     resources :home
     resources :users
-
     match '/contacts', to: 'contacts#new', via: 'get'
-
-   resources "contacts", only: [:new, :create]
-
-
+    resources "contacts", only: [:new, :create]
     resource :session
 
 
