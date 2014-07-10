@@ -57,14 +57,16 @@
 
 <!--                                Dropdown Sign in Form-->
 
-                                <form id="loginform" class="form-signin" role="form">
+<!--                                <form id="loginform" class="form-signin" role="form">-->
+                                   <%= form_tag session_path, method: 'post' do %>
+                                   <br>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">
+                                        <input id="email" type="text" class="form-control" name="email" value="" placeholder="Email">
                                     </div>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                        <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                                        <input id="password" type="password" class="form-control" name="password" placeholder="Password">
                                     </div>
                                         <div class="input-group">
                                         <div class="checkbox">
@@ -75,8 +77,8 @@
                                     </div>
                                         <div class="form-group">
                                         <div class="controls">
-                                            <a id="btn-login" href="#" class="btn btn-danger">Login  </a>
-                                            <a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>
+                                            <button type="submit" name="commit"class="btn btn-danger">Login</button>
+                                            <button id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</button>
                                         </div>
                                     </div>
                                         <div style="border-top: 1px solid #888; padding-top:15px; font-size:85%" >
@@ -85,7 +87,8 @@
                                             Sign Up Here
                                         </button>
                                     </div>
-                                </form>
+                                    <% end %>
+<!--                                </form>-->
                             </div>
                         </div>
                         <div id="signupbox" class="dropdown-menu panel panel-default" style="display:none;">
@@ -100,7 +103,7 @@
 
                                 <form id="new_user" action="/users" accept-charset="UTF08" method="post" class="form-signup" role="form">
                                     <%= form_for User.new do |u| %>
-                                    <div class="padding"></div>
+                                    <br>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
                                         <input type="email" class="form-control" name="user[email]" id="user_email" value="" placeholder="Email">
