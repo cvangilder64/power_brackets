@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(safe_params)
 		@user.save
-		respond_with @user
+		respond_with @user, location: session_url, action: :new
 	end
 
 	def edit
@@ -48,6 +48,6 @@ class UsersController < ApplicationController
 	end
 
 	def ensure_current_user
-
+        redirect_to new_session_url unless logged_in?
 	end
 end

@@ -1,0 +1,38 @@
+
+<div class="jumbotron">
+
+<div class="col-md-4 col-md-offset-4">
+<%= form_tag session_path, method: 'post' do %>
+      <h1>Sign In</h1>
+    <br>
+ <!-- Email Address Input -->
+    <div class="input-group">
+  <span class="input-group-addon">
+    <span class="glyphicon glyphicon-envelope"></span>
+  </span>
+  <input class="form-control" type="text" placeholder="Email address" name="email" id="email">
+</div>
+
+    <br>
+
+
+    <!-- Password Input -->
+<div class="input-group">
+  <span class="input-group-addon">
+    <span class="glyphicon glyphicon-lock"></span>
+  </span>
+  <input class="form-control" type="password" placeholder="Password" name="password" id="password">
+</div>
+    <br>
+
+
+    <!-- Sign In Button -->
+      <button type="submit" name="commit" class="sign-in-button">Sign In Now</button>
+
+<% end %>
+
+
+
+    </div>
+    </div>
+
