@@ -87,30 +87,36 @@
                                     <button id="signinlink" class="btn btn-link" type="button" style="float:right; font-size: 85%; position: relative; top:-15px" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</button>
                             </div>
                             <div class="panel-body" >
-                                <form id="signupform" class="form-signup" role="form">
 
+
+
+
+                                <form id="new_user" action="/users" accept-charset="UTF08" method="post" class="form-signup" role="form">
+                                    <%= form_for @user do |u| %>
+                                    <div class="padding"></div>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                        <input type="email" class="form-control" name="email" value="" placeholder="Email">
+                                        <input type="email" class="form-control" name="user[email]" id="user_email" value="" placeholder="Email">
                                     </div>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input type="text" style="border-bottom:none;" class="form-control" name="first_name" value="" placeholder="First Name">
-                                        <input type="text" class="form-control" name="last_name" value="" placeholder="Last Name">
+                                        <input type="text" style="border-bottom:none;" class="form-control" name="user[name]" id="user_name" value="" placeholder="First Name">
+                                        <input type="text" class="form-control" name="user[last_name]" id="user_last_name" value="" placeholder="Last Name">
                                     </div>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                        <input type="password" class="form-control" name="password" value="" placeholder="Password">
-                                        <input type="password" class="form-control" name="confirm_password" value="" placeholder="Confirm Password">
+                                        <input type="password" class="form-control" name="user[password]" id="user_password" value="" placeholder="Password">
+                                        <input type="password" class="form-control" name="user[password_confirmation]" id="user_password_confirmation" value="" placeholder="Confirm Password">
                                     </div>
                                     <div class="form-group">
-                                        <button id="btn-signup" type="button" class="btn btn-danger"><i class="icon-hand-right"></i>Sign Up</button>
+                                        <button id="btn-signup" type="submit" class="btn btn-danger"  name="commit"><i class="icon-hand-right"></i>Sign Up</button>
                                         <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>Sign Up with Facebook</button>
                                     </div>
                                     <div id="signupalert" style="display:none" class="alert alert-danger">
                                         <p>Error:</p>
                                         <span></span>
                                     </div>
+                                    <% end %>
                                 </form>
                             </div>
                         </div>
