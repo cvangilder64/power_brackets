@@ -2978,7 +2978,7 @@ fieldset[disabled] .btn-warning.active {
 }
 .btn-danger {
   color: #fff;
-  background-color: #d9534f;
+  background-color: rgba(255,0,0,.6);
   border-color: #d43f3a;
 }
 .btn-danger:hover,
@@ -2987,7 +2987,7 @@ fieldset[disabled] .btn-warning.active {
 .btn-danger.active,
 .open > .dropdown-toggle.btn-danger {
   color: #fff;
-  background-color: #c9302c;
+
   border-color: #ac2925;
 }
 .btn-danger:active,
@@ -3622,29 +3622,29 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   max-width: none;
 }
 .nav-tabs {
-  border-bottom: 1px solid #ddd;
+
 }
 .nav-tabs > li {
   float: left;
-  margin-bottom: -1px;
+  margin-bottom: -6px;
 }
 .nav-tabs > li > a {
+    background-color:;
   margin-right: 2px;
   line-height: 1.42857143;
   border: 1px solid transparent;
-  border-radius: 4px 4px 0 0;
+
 }
 .nav-tabs > li > a:hover {
-  border-color: #eee #eee #ddd;
+  border-color:;
 }
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: #555;
   cursor: default;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-bottom-color: transparent;
+
+
 }
 .nav-tabs.nav-justified {
   width: 100%;
@@ -3709,7 +3709,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   float: none;
 }
 .nav-stacked > li + li {
-  margin-top: 2px;
+  margin-top: 0px;
   margin-left: 0;
 }
 .nav-justified {

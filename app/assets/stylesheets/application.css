@@ -444,6 +444,13 @@ h4{
     text-align: center;
 }
 
+.verticalnav{
+     background-color: rgba(237,28,36,.8);
+    color:white;
+    margin-bottom:7px;
+    padding:20px 40px;
+    border-radius: 2px;
+}
 .sign-in-button{
  background-color: rgba(237,28,36,.8);
     color:white;
