@@ -40,7 +40,11 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li> <a href="/users/new">Sign Up</a></li>
+                   <% if current_user %>
+                       <li><%= link_to current_user.name, current_user %></li>
+                   <% else %>
+                       <li> <a href="/users/new">Sign Up</a></li>
+                   <% end %>
                     <li class="dropdown">
                         <button class="btn btn-danger dropdown-toggle poweron" data-toggle="dropdown">Power On</button>
                         <div id="loginbox" class="dropdown-menu panel panel-default">
