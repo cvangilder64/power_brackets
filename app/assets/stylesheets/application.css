@@ -476,3 +476,9 @@ h4{
 .padding{
     margin-top:15px;
 }
+
+.flash{
+    color:white;
+    text-align: center;
+    margin-top:10px;
+}
