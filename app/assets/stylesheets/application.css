@@ -474,11 +474,26 @@ h4{
 }
 
 .padding{
-    margin-top:15px;
+    margin-top:50px;
 }
 
 .flash{
     color:white;
     text-align: center;
     margin-top:10px;
+}
+
+.sidenav{
+    text-align: center;
+    min-height: 100%;
+    background-color:#060321;
+    margin-left:-15px;
+
+}
+
+.col-sm-1 li{
+    text-align: center;
+    padding:20px 0px;
+    list-style-type: none;
+    margin-left:-5px;
 }
