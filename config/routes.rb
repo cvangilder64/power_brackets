@@ -4,6 +4,10 @@ Rails.application.routes.draw do
     resources :home
     resources :users
 
+    match '/contacts', to: 'contacts#new', via: 'get'
+
+resources "contacts", only: [:new, :create]
+
 
 
 
