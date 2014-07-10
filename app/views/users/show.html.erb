@@ -1,6 +1,5 @@
-<br>
-<br>
-<br>
-<div class="container-fluid container1">
-
+<div class="jumbotron">
+    <%= @user.name %>
+    <%= link_to "Sign Out", session_path, method: :delete %>
 </div>
+

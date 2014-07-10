@@ -1,46 +1,42 @@
-<div class="container-fluid container1" id="logo">
+
+
+
     <div class="jumbotron">
         <form class="col-md-6" action="/users" accept-charset="UTF08" id="new_user" method="post">
             <h2>Create a New Profile</h2>
-            <form class="col-md-6">
-
-            <%= form_for @user do |u| %>
-
-
-             <!-- Email Address Input -->
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                <input class="form-control" type="email" placeholder="Email address" name="user[email]" id="user_email">
-            </div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input class="form-control" type="text" placeholder="Full Name" id="user_name" name="user[name]">
-
-            </div>
-            <!-- Password Input -->
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                <input class="form-control" type="password" placeholder="Password" id="user_password" name="user[password]">
-                <input class="form-control" type="password" placeholder="Confirm Password" id="user_password_confirmation" name="user[password_confirmation]">
-            </div>
-            <div id="signupalert" style="display:none" class="alert alert-danger">
-                <p>Error:</p>
-                <span></span>
-            </div>
-            <!-- Sign Up Button -->
-            <button type="submit" class="sign-in-button" name="commit" value="Sign Up Now">Sign Up Now</button>
-            <div>
-                <br>
-            <%  if @user.errors.any? %>
-                <% @user.errors.full_messages.each do |message| %>
-                    <span class="glyphicon glyphicon-remove"> <%= message %></span>
-                    <br>
-                <% end %>
-            <% end %>
+            <%= form_for User.new, html: {class: "col-md-6"} do |u| %>
+                <!-- Email Address Input -->
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                    <input class="form-control" type="email" placeholder="Email address" name="user[email]" id="user_email">
                 </div>
-
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input class="form-control" type="text" placeholder="First Name" id="user_name" name="user[name]">
+                    <input class="form-control" type="text" placeholder="Last Name" id="user_last_name" name="user[last_name]">
+                </div>
+                <!-- Password Input -->
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input class="form-control" type="password" placeholder="Password" id="user_password" name="user[password]">
+                    <input class="form-control" type="password" placeholder="Confirm Password" id="user_password_confirmation" name="user[password_confirmation]">
+                </div>
+                <div id="signupalert" style="display:none" class="alert alert-danger">
+                    <p>Error:</p>
+                    <span></span>
+                </div>
+                <!-- Sign Up Button -->
+                <button type="submit" class="sign-in-button" name="commit" value="Sign Up Now">Sign Up Now</button>
+                <div class="left">
+                    <br>
+                    <%  if @user.errors.any? %>
+                        <% @user.errors.full_messages.each do |message| %>
+                            <span class="glyphicon glyphicon-remove"> <%= message %></span>
+                            <br>
+                        <% end %>
+                    <% end %>
+                </div>
             <% end %>
-        </form>
 
         <div class="col-md-6 hidden-xs">
             <h2>Already a Member?</h2>
