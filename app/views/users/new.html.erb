@@ -1,8 +1,11 @@
+
+
+
 <div class="container-fluid container1" id="logo">
     <div class="jumbotron">
         <form class="col-md-6" action="/users" accept-charset="UTF08" id="new_user" method="post">
             <h2>Create a New Profile</h2>
-            <%= form_for @user, html: {class: "col-md-6"} do |u| %>
+            <%= form_for User.new, html: {class: "col-md-6"} do |u| %>
                 <!-- Email Address Input -->
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>

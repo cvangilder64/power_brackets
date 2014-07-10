@@ -70,13 +70,12 @@
     <!-- Join the team / Sign Up / Sign In Page -->
 <div class="container-fluid container3" id="signup" >
     <div class="col-md-12"><h1 class="teamh1">Join the team!</h1></div>
-<div class="col-md-6" ><br><h1 class="signuph1">Sign In</h1>
+<div class="col-md-6  hidden-sm hidden-xs" ><br><h1 class="signuph1">Sign In</h1>
     <h3 >Jump into the competition</h3>
+  <br>
     <br>
-    <br>
-
     <!-- Email Address Input -->
-    <div class="input-group input-group-lg">
+    <div class="input-group">
   <span class="input-group-addon">
     <span class="glyphicon glyphicon-envelope"></span>
   </span>
@@ -84,49 +83,55 @@
 </div>
 
     <br>
-    <br>
+
 
     <!-- Password Input -->
-<div class="input-group input-group-lg">
+<div class="input-group">
   <span class="input-group-addon">
     <span class="glyphicon glyphicon-lock"></span>
   </span>
   <input class="form-control" type="password" placeholder="Password">
 </div>
     <br>
-    <br>
+
 
     <!-- Sign In Button -->
       <button type="submit" class="sign-in-button">Sign In Now</button>
     </div>
 
-<div class="col-md-6 hidden-sm hidden-xs"><br><h1 class="signuph1">Sign Up</h1>
+<div class="col-md-6"><br><h1 class="signuph1">Sign Up</h1>
     <h4 class="signuph4">Connect with your friends and learn about<br> competitions in your area!</h4>
     <br>
     <br>
 
     <!-- Email Address Input -->
-    <div class="input-group input-group-lg">
-  <span class="input-group-addon">
-    <span class="glyphicon glyphicon-envelope"></span>
-  </span>
-  <input class="form-control" type="text" placeholder="Email address">
-</div>
-    <br>
-    <br>
+    <form action="/users" accept-charset="UTF08" id="new_user" method="post">
+            <%= form_for User.new  do |u| %>
+                <!-- Email Address Input -->
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                    <input class="form-control" type="email" placeholder="Email address" name="user[email]" id="user_email">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input class="form-control" type="text" placeholder="First Name" id="user_name" name="user[name]">
+                    <input class="form-control" type="text" placeholder="Last Name" id="user_last_name" name="user[last_name]">
+                </div>
+                <!-- Password Input -->
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input class="form-control" type="password" placeholder="Password" id="user_password" name="user[password]">
+                    <input class="form-control" type="password" placeholder="Confirm Password" id="user_password_confirmation" name="user[password_confirmation]">
+                </div>
+                <div id="signupalert" style="display:none" class="alert alert-danger">
+                    <p>Error:</p>
+                    <span></span>
+                </div>
+                <!-- Sign Up Button -->
+                <button type="submit" class="sign-in-button" name="commit" value="Sign Up Now">Sign Up Now</button>
 
-    <!-- Password Input -->
-<div class="input-group input-group-lg">
-  <span class="input-group-addon">
-    <span class="glyphicon glyphicon-lock"></span>
-  </span>
-  <input class="form-control" type="password" placeholder="Password">
-</div>
-    <br>
-    <br>
+    <% end %>
 
-    <!-- Sign Up Button -->
-      <button type="submit" class="sign-in-button">Sign Up Now</button>
     </div>
 </div>
 <div class="texture"></div>

@@ -50,6 +50,9 @@
                             </div>
                             <div class="panel-body">
                                 <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+<!--                                Dropdown Sign in Form-->
+
                                 <form id="loginform" class="form-signin" role="form">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -89,10 +92,10 @@
                             <div class="panel-body" >
 
 
-
+<!--Drop Down Sign Up Form-->
 
                                 <form id="new_user" action="/users" accept-charset="UTF08" method="post" class="form-signup" role="form">
-                                    <%= form_for @user do |u| %>
+                                    <%= form_for User.new do |u| %>
                                     <div class="padding"></div>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
