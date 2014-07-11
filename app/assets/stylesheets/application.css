@@ -10,9 +10,12 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require bootstrap
+ *= require bootstrap-theme
  *= require_tree .
  *= require_self
  *= require rails_bootstrap_forms
+
  */
 body{
   height:100%;
@@ -200,8 +203,6 @@ background-color:rgba(237,28,36,.6);
 
 footer{
     color:white;
-
-
 }
 
 footer img{
@@ -413,7 +414,7 @@ text-align: center;
 }
 
 .signuph4{
-    
+    color:white;
     margin-bottom:-10px;
 }
 

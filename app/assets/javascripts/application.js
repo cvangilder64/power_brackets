@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
+//= require bootstrap
 
 //    scroll to anchor function
 $(function() {
