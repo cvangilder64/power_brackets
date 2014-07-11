@@ -1,15 +1,25 @@
 <div class="container-fluid container1">
 
+<!--    sidenav-->
+<div class="col-xs-5 col-sm-3  col-md-2  col-lg-1 padding">
+    <ul class="nav nav-tabs nav-stacked">
+        <li> <%= link_to "Sign Out", session_path, method: :delete %></li>
+         <li><a href="#">Profile</a></li>
+         <li><a href="#">Photos</a></li>
+         <li><a href="#">Team</a></li>
+         <li><a href="#">Statistics</a></li>
+        <li><a href="#">Tournaments</a></li>
+    </ul>
+</div>
+<!--    end sidenav-->
 
 
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-     Welcome, <%= @user.name %><br>
-    <%= link_to "Sign Out", session_path, method: :delete %>
+
+
 
 </div>
+
+
+
+
