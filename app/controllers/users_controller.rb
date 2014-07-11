@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     def create
         @user = User.new(safe_params)
         @user.save
-        respond_with @user, location: session_url, action: :new
+        respond_with @user, location: current_user, action: :new
     end
 
     def edit
