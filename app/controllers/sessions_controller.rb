@@ -13,12 +13,12 @@ class SessionsController < ApplicationController
     end
 
     def create
-        user_omniauth = User.from_omniauth(env["omniauth.auth"])
-        user = User.where(email: params[:email]).first
-        if user_omniauth
+        if env["omniauth.auth"]
+            user = User.from_omniauth(env["omniauth.auth"])
             session[:user_id] = user.id
             redirect_to current_user
         else
+            user = User.where(email: params[:email]).first
             if user && user.authenticate(params[:password])
                 session[:user_id] = user.id
                 redirect_to current_user

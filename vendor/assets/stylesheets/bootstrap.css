@@ -48,7 +48,7 @@ a {
 }
 a:active,
 a:hover {
-  
+
 }
 abbr[title] {
   border-bottom: 1px dotted;
@@ -199,7 +199,7 @@ th {
   }
   a,
   a:visited {
-    
+
   }
   a[href]:after {
     content: " (" attr(href) ")";
@@ -922,7 +922,7 @@ a:focus {
   text-decoration:none ;
 }
 a:focus {
- 
+
 }
 figure {
   margin: 0;
@@ -2774,7 +2774,7 @@ fieldset[disabled] .btn {
     margin-left:5px;
   color: white;
   background-color:rgba(237,28,36,.6);
- 
+
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -4551,7 +4551,6 @@ a.list-group-item.active > .badge,
   padding: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eee;
 }
 .jumbotron h1,
 .jumbotron .h1 {

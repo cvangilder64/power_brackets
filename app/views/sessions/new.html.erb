@@ -3,7 +3,7 @@
 
 <div id="user-widget">
   <% if current_user %>
-    Welcome <strong><%= current_user.name %></strong>!
+    Welcome <%= current_user.name %>!
     <%= link_to "Sign out", signout_path %>
   <% else %>
     <%= link_to "Sign in with Facebook", "/auth/facebook" %>
