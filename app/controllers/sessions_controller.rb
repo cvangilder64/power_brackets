@@ -13,13 +13,19 @@ class SessionsController < ApplicationController
     end
 
     def create
+        user_omniauth = User.from_omniauth(env["omniauth.auth"])
         user = User.where(email: params[:email]).first
-        if user && user.authenticate(params[:password])
+        if user_omniauth
             session[:user_id] = user.id
             redirect_to current_user
         else
-            flash[:notice] = "Invalid email or password."
-            redirect_to new_session_url
+            if user && user.authenticate(params[:password])
+                session[:user_id] = user.id
+                redirect_to current_user
+            else
+                flash[:notice] = "Invalid email or password."
+                redirect_to new_session_url
+            end
         end
     end
 
