@@ -27,25 +27,25 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-left">
                     <li>
-                       <%= link_to "Home", "#logo" %>
+                       <%= link_to "Home", "/#logo" %>
 
                     </li>
                     <li>
-                       <%= link_to "About", "#about" %>
+                       <%= link_to "About", "/#about" %>
 
                     </li>
                     <li>
-                       <%= link_to "Contact", "#contact" %>
+                       <%= link_to "Contact", "/#contact" %>
 
                     </li>
                      <li>
-                       <%= link_to "Pricing", "#pricing" %>
+                       <%= link_to "Pricing", "/#pricing" %>
 
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                    <% if current_user %>
-                       <li><%= link_to current_user.name + ' ' + current_user.last_name, current_user %></li>
+                       <li><%= link_to current_user.name, current_user %></li>
                    <% else %>
                        <li> <a href="/users/new">Sign Up</a></li>
                    <% end %>
