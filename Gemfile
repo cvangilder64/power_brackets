@@ -44,4 +44,7 @@ gem 'bootstrap_form'
 # gem 'debugger', group: [:development, :test]
 
 gem 'omniauth'
+
 gem 'omniauth-facebook', '1.4.0'
+gem "omniauth-google-oauth2"
+gem 'omniauth-twitter'

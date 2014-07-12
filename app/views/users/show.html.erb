@@ -1,15 +1,59 @@
 <div class="container-fluid container1">
 
+<!--    sidenav-->
+<div class="padding">
+    <ul class="nav nav-tabs nav-stacked">
+        <li> <%= link_to "Sign Out", session_path, method: :delete %></li>
+         <li><a href="#">Profile</a></li>
+         <li><a href="#">Photos</a></li>
+         <li><a href="#">Team</a></li>
+         <li><a href="#">Statistics</a></li>
+        <li><a href="#">Tournaments</a></li>
+    </ul>
+</div>
+<!--    end sidenav-->
+
+<div class="container">
+<div class="row banner">
+    <div class="row">
+        <div class=" col-sm-10 col-md-10 col-xs-9  col-md-offset-1 col-sm-offset-2 col-xs-offset-3">
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <img src="http://francis.edu/uploadedImages/Content/Home/Academics/Schools_and_Departments/blank-profile-photo.jpg" alt="" class="img-rounded img-responsive" />
+                    </div>
+                    <div class="col-sm-6 col-md-5">
+
+                            <strong><%= current_user.name %> <%= current_user.last_name%></strong>
+                        <small><cite title="San Francisco, USA">Click to edit your location<i class="glyphicon glyphicon-map-marker">
+                        </i></cite>
+                            <br>
+                            <br>
+                        <p>
+                            <i class="glyphicon glyphicon-envelope"></i>  <% if current_user.email %>
+                       <%= current_user.email%>
+                   <% else %>
+                      Click to edit your email
+                   <% end %>
+
+                            <br />
+                             <br />
+                            <i class="glyphicon glyphicon-gift"></i> Click to add your birthday</p></small>
+
+                    </div>
+                    <div class="col-md-3"><small>You have 255 Team Members</small></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 
 
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-     Welcome, <%= @user.name %><br>
-    <%= link_to "Sign Out", session_path, method: :delete %>
 
 </div>
+
+
+
+
