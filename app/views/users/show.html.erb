@@ -1,52 +1,63 @@
 <div class="container-fluid container1">
 
 <!--    sidenav-->
-<div class="padding">
-    <ul class="nav nav-tabs nav-stacked">
-        <li> <%= link_to "Sign Out", session_path, method: :delete %></li>
-         <li><a href="#">Profile</a></li>
-         <li><a href="#">Photos</a></li>
-         <li><a href="#">Team</a></li>
-         <li><a href="#">Statistics</a></li>
-        <li><a href="#">Tournaments</a></li>
-    </ul>
-</div>
 <!--    end sidenav-->
 
 <div class="container">
 <div class="row banner">
     <div class="row">
-        <div class=" col-sm-10 col-md-10 col-xs-9  col-md-offset-1 col-sm-offset-2 col-xs-offset-3">
+        <div class="col-md-12">
             <div class="well well-sm">
                 <div class="row">
-                    <div class="col-sm-6 col-md-4">
-                        <img src="http://francis.edu/uploadedImages/Content/Home/Academics/Schools_and_Departments/blank-profile-photo.jpg" alt="" class="img-rounded img-responsive" />
+                    <div class="col-sm-4 col-md-3 profile">
+                        <img src="http://francis.edu/uploadedImages/Content/Home/Academics/Schools_and_Departments/blank-profile-photo.jpg" alt="" class=" profile img-rounded img-responsive" />
                     </div>
-                    <div class="col-sm-6 col-md-5">
+                    <div class="col-sm-6 col-md-6 profile">
 
                             <strong><%= current_user.name %> <%= current_user.last_name%></strong>
-                        <small><cite title="San Francisco, USA">Click to edit your location<i class="glyphicon glyphicon-map-marker">
-                        </i></cite>
+                        <small><i class="glyphicon glyphicon-map-marker">
+                        </i><cite title="San Francisco, USA"> No Info Added</cite>
                             <br>
                             <br>
                         <p>
                             <i class="glyphicon glyphicon-envelope"></i>  <% if current_user.email %>
                        <%= current_user.email%>
                    <% else %>
-                      Click to edit your email
+                      No Info Added
                    <% end %>
 
                             <br />
                              <br />
-                            <i class="glyphicon glyphicon-gift"></i> Click to add your birthday</p></small>
+                            <i class="glyphicon glyphicon-gift"></i> No Info Added</p></small>
+                        <br>
+
+
+
+                            <small><i class="glyphicon glyphicon-pencil"></i> <%= link_to 'Edit Info', edit_user_path(@user) %></small>
 
                     </div>
-                    <div class="col-md-3"><small>You have 255 Team Members</small></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+     <nav class="nav" role="navigation">
+        <ul class="nav navbar-nav navbar-inverse">
+         <li class="col-md-offset-4 col-sm-offset-3"><a href="#">Photos</a></li>
+             <li><a href="#">Team</a></li>
+             <li><a href="#">Tournaments</a></li>
+             <li><a href="#">Statistics</a></li>
+
+
+
+         </ul>
+    </nav>
+
+
+
+    <div class="col-md-4"><span class="info"><p><strong>255</strong> <br> Team Members</p></span></div>
+    <div class="col-md-4"><span class="info"><p><strong>1.54</strong> <br> Win / Loss %</p></span></div>
+    <div class="col-md-4"><span class="info"><p><strong>11</strong> <br> Completed Tournaments</p></span></div>
 </div>
 
 

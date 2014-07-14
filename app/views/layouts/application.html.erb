@@ -49,6 +49,12 @@
                    <% else %>
                        <li> <a href="/users/new">Sign Up</a></li>
                    <% end %>
+                    <% if current_user %>
+                    <li class="dropdown">
+
+                         <button class="btn btn-danger poweron dropdown-toggle" data-toggle="dropdown"><%= link_to "Power Off", session_path, method: :delete %></button>
+                        </li>
+                    <% else %>
                     <li class="dropdown">
                         <button class="btn btn-danger dropdown-toggle poweron" data-toggle="dropdown">Power On</button>
                         <div id="loginbox" class="dropdown-menu panel panel-default">
@@ -131,6 +137,7 @@
                                         <span></span>
                                     </div>
                                     <% end %>
+                                    <% end%>
                                 </form>
                             </div>
                         </div>
