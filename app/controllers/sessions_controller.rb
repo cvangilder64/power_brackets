@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
             redirect_to current_user
         else
             user = User.where(email: params[:email]).first
-          if user #&& user.authenticate(params[:password])
+          if user && user.valid_password?(params[:password])
                 session[:user_id] = user.id
                 redirect_to current_user
             else

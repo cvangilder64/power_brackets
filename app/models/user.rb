@@ -4,6 +4,11 @@ class User < ActiveRecord::Base
     TEMP_EMAIL_PREFIX = 'change@me'
     TEMP_EMAIL_REGEX = /\Achange@me/
 
+    validates :name, presence: true
+    validates :last_name, presence: true, :unless => :provider?
+    validates :email, presence: true, :unless => :provider?
+    has_secure_password
+
     devise :database_authenticatable, :registerable,
         :recoverable, :rememberable, :trackable, :validatable,
         :confirmable, :lockable, :omniauthable,
