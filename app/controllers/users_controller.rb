@@ -42,6 +42,7 @@ class UsersController < ApplicationController
         :name,
         :last_name,
         :email,
+        :encrypted_password,
         :password,
         :password_confirmation
     ]

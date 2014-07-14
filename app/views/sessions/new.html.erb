@@ -2,7 +2,7 @@
 <div class="jumbotron">
 
 <div id="user-widget">
-  <% if current_user %>
+  <% if user_signed_in? %>
     Welcome <%= current_user.name %>!
     <%= link_to "Sign out", signout_path %>
   <% else %>
@@ -11,19 +11,19 @@
 
 </div>
 <div id="user-widget">
-  <% if current_user %>
+  <% if user_signed_in? %>
     Welcome <%= current_user.name %>!
     <%= link_to "Sign out", signout_path %>
   <% else %>
-    <%= link_to "Sign in with Google+", "/auth/google_oauth2" %>
+    <%= link_to "Sign in with Google+", user_omniauth_authorize_path(:google_oauth2) %>
   <% end %>
 </div>
 <div id="user-widget">
-  <% if current_user %>
+  <% if user_signed_in? %>
     Welcome <%= current_user.name %>!
     <%= link_to "Sign out", signout_path %>
   <% else %>
-    <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+    <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
   <% end %>
 </div>
 
