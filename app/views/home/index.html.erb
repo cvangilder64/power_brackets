@@ -53,8 +53,8 @@
 
     <!-- User Team Profile Page Section -->
 <div class="container-fluid container3">
-<div class="col-md-8 profile"><span class=""><%=image_tag('profile.png', width: '98%')%></span></div>
-    <div class="col-md-4 profile"><h1 class="profileh1">User / Team Profiles</h1>
+<div class="col-md-8 notifications"><span class=""><%=image_tag('profile.png', width: '98%')%></span></div>
+    <div class="col-md-4 notifications"><h1 class="profileh1">User / Team Profiles</h1>
     <ul class="hidden-sm hidden-xs">
         <li><h3>Default banners based on your interests</h3></li>
         <li><h3>Keep track of your records / statistics</h3></li>
@@ -70,39 +70,10 @@
     <!-- Join the team / Sign Up / Sign In Page -->
 <div class="container-fluid container3" id="signup" >
     <div class="col-md-12"><h1 class="teamh1">Join the team!</h1></div>
-<div class="col-md-6  hidden-sm hidden-xs" ><br><h1 class="signuph1">Sign In</h1>
-    <h3 style="color:white;">Jump into the competition</h3>
-  <br>
-    <br>
-
-    <%= form_tag session_path, method: 'post' do %>
-    <!-- Email Address Input -->
-    <div class="input-group">
-  <span class="input-group-addon">
-    <span class="glyphicon glyphicon-envelope"></span>
-  </span>
-  <input class="form-control" type="text" name="email" id="email" placeholder="Email address">
-</div>
-
-    <br>
 
 
-    <!-- Password Input -->
-<div class="input-group">
-  <span class="input-group-addon">
-    <span class="glyphicon glyphicon-lock"></span>
-  </span>
-  <input class="form-control" type="password" name="password" id="password" placeholder="Password">
-</div>
-    <br>
 
-
-    <!-- Sign In Button -->
-      <button type="submit" name="commit" class="sign-in-button">Sign In Now</button>
-    </div>
-    <% end %>
-
-<div class="col-md-6"><br><h1 class="signuph1">Sign Up</h1>
+<div class="col-md-6 col-md-offset-3"><br><h1 class="signuph1">Sign Up</h1>
     <h4 class="signuph4">Connect with your friends and learn about<br> competitions in your area!</h4>
     <br>
     <br>
