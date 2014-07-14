@@ -267,7 +267,13 @@ td{
 .pricing:last-of-type{
     margin-left:5px;
 }
+@media (max-width:767px){
 
+       .profile{
+margin:0px auto;
+        text-align: center;
+}
+}
 
 @media (max-width:720px){
     .pricing{
@@ -285,6 +291,9 @@ td{
     .pricing p{
         margin-bottom:1px;
     }
+
+
+
 }
 @media (max-height:700px) and (max-width:520px){
 
@@ -396,9 +405,7 @@ td{
     height:300px;
 }
 
-.profile{
- margin-top:45px;
-}
+
 
 .profileh1{
     margin-top:0px;
@@ -527,4 +534,27 @@ strong{
     color:grey;
     font-size:35px;
 
+}
+
+.info{
+    height:150px;
+    color:grey;
+    border-radius:5px;
+    text-align: center;
+
+}
+
+
+.info  strong{
+    color:white;
+    font-size:55px;
+}
+
+.info p{
+    margin-top:15px;
+    font-size:20px;
+}
+
+small a{
+    color:grey;
 }
