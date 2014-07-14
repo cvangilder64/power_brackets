@@ -43,5 +43,12 @@ gem 'bootstrap_form'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem "letter_opener", group: :development
+
+gem 'devise'
+
 gem 'omniauth'
+
 gem 'omniauth-facebook', '1.4.0'
+gem "omniauth-google-oauth2"
+gem 'omniauth-twitter'

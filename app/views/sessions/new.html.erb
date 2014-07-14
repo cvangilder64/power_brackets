@@ -6,7 +6,24 @@
     Welcome <%= current_user.name %>!
     <%= link_to "Sign out", signout_path %>
   <% else %>
-    <%= link_to "Sign in with Facebook", "/auth/facebook" %>
+    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+  <% end %>
+
+</div>
+<div id="user-widget">
+  <% if current_user %>
+    Welcome <%= current_user.name %>!
+    <%= link_to "Sign out", signout_path %>
+  <% else %>
+    <%= link_to "Sign in with Google+", "/auth/google_oauth2" %>
+  <% end %>
+</div>
+<div id="user-widget">
+  <% if current_user %>
+    Welcome <%= current_user.name %>!
+    <%= link_to "Sign out", signout_path %>
+  <% else %>
+    <%= link_to "Sign in with Twitter", "/auth/twitter" %>
   <% end %>
 </div>
 
