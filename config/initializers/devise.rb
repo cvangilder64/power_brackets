@@ -230,8 +230,6 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-    require "omniauth-facebook"
-    OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if Rails.env.development?
     config.omniauth :facebook, "707977439238496", "e420c6669f2e633a9ea8defb23ff5286"
     config.omniauth :twitter, "OZTTQp8bxeCuJAvYLPsYWrzk6", "gTZby0vCW9PDaFYV9XitcaBhDSjH53H9tJHma2v1voxsuhWDRj"
     config.omniauth :google_oauth2, "408156623576-9njv6khkt2uqp6nvc3k3b51hn9lmiv2c.apps.googleusercontent.com", "a4h-n3PY1OiRjHIBHzfi0Xtp"
